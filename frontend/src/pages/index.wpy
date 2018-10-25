@@ -1,0 +1,57 @@
+<style lang="less">
+
+</style>
+<template>
+  <view class="container">
+    <button open-type="getUserInfo" @getuserinfo="login">使用微信授权登录</button>
+    <button @tap='connectSocket'> 链接Socket </button>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import { login } from '@/lib/session'
+  import { get } from '@/lib/http'
+  import { tryCatch } from '@/lib/helper'
+  import { connect } from 'wepy-redux'
+  import { storeStaticSeat } from '@/store/action'
+  @connect({
+  }, {
+    storeStaticSeat
+  })
+  export default class Index extends wepy.page {
+    config = {
+    }
+    components = {
+    }
+
+    data = {
+    }
+
+    computed = {
+    }
+
+    methods = {
+      async login (e) {
+        const { rawData, signature, encryptedData, iv } = e.detail
+        const [, err] = tryCatch(await login(rawData, signature, encryptedData, iv))
+        if (err) {
+          return wx.showToast({ title: '授权错误，请重试', image: '/assets/icon-error.png' })
+        }
+        const [getSeatRes, getSeatErr] = tryCatch(await get('/seat'))
+        if (getSeatErr) {
+          return wx.showToast({title: '获取座位信息'})
+        }
+        console.log(getSeatRes)
+        this.methods.storeStaticSeat(getSeatRes)
+        this.$apply()
+      }
+    }
+
+    events = {
+    }
+
+    onLoad() {
+    }
+  }
+</script>

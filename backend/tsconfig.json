@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": false,
+        "noUnusedLocals": false,
+        "removeComments": true,
+        "noLib": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "target": "es6",
+        "inlineSourceMap": true,
+        "outDir": "dist",
+        "declaration": false,
+        "moduleResolution": "node",
+        "baseUrl": "./src",
+        "paths": {
+            "@config": ["config"],
+            "@libs/*": ["libs/*"],
+            "@routes": ["routes"],
+            "@middlewares": ["middlewares"],
+            "@models": ["models"],
+            "@models/*": ["models/*"],
+            "@websocket": ["websocket"],
+            "@websocket/*": ["websocket/*"],
+            "@types": ["types"],
+            "@types/*": ["types/*"]
+        }
+    },
+    "include": [
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint-react"],
+  "jsRules": {},
+  "rules": {
+    "no-empty": true,
+    "triple-equals": false,
+    "no-var-keyword": true,
+    "variable-name": true,
+    "ordered-imports": false,
+    "semicolon": [true, "never"],
+    "promise-function-async": true,
+    "indent": [true, "spaces", 4]
+  },
+  "linterOptions": {
+    "exclude": ["build/**/*.js", "node_modules/**/*.ts"]
+  },
+  "rulesDirectory": []
+}

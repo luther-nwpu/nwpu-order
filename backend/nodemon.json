@@ -1,0 +1,34 @@
+{
+    "restartable": "rs",
+    "ignore": [
+        ".git",
+        "node_modules/**/node_modules"
+    ],
+    "verbose": true,
+    "execMap": {
+        "js": "node --harmony",
+        "ts": "ts-node -r tsconfig-paths/register"
+    },
+    "env": {
+        "NODE_ENV": "development",
+        "DEBUG": "*,-nodemon:*,-nodemon,-knex:pool",
+        "DB_HOST": "localhost",
+        "DB_PORT": "3306",
+        "DB_USER": "nwpu",
+        "DB_PASS": "Npu2015303320",
+        "DB_NAME": "nwpuorder",
+        "DB_CHAR": "utf8mb4",
+        "REDIS_HOST": "localhost",
+        "JWT_SECRET": "Npu2015303320",
+        "WX_APPID": "wx64b908a4f8bd6f6e",
+        "WX_APPSECRET": "c73e5ad1a0c7b1218ad0d8b8707d866c",
+        "WX_MP_APPID": "",
+        "WX_MP_APPSECRET": "",
+        "QCLOUD_APPID": "",
+        "QCLOUD_SECRETID": "",
+        "QCLOUD_SECRETKEY": "",
+        "WX_PAY_MCH_ID": "",
+        "WX_PAY_KEY": ""
+    },
+    "ext": "js json ts"
+}

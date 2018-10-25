@@ -1,0 +1,26 @@
+{
+	"apps": [{
+		"name": "nwpuorderb",
+		"script": "dist/app.js",
+		"exec_mode"  : "cluster",
+		"instances": 0,
+		"node_args": "--harmony -r ./dist/bootstrap.js",
+		"watch": false,
+		"log_date_format": "YYYY-MM-DD HH:mm:ss",
+		"env": {
+			"NODE_ENV": "production",
+			"DB_HOST": "localhost",
+			"DB_PORT": "3306",
+			"DB_USER": "nwpu",
+			"DB_PASS": "Npu2015303320",
+			"DB_NAME": "nwpuorder",
+			"DB_CHAR": "utf8mb4",
+			"REDIS_HOST": "localhost",
+			"JWT_SECRET": "Npu2015303320",
+			"WX_APPID": "wx64b908a4f8bd6f6e",
+			"WX_APPSECRET": "c73e5ad1a0c7b1218ad0d8b8707d866c",
+			"WX_MP_APPID": "",
+			"WX_MP_APPSECRET": ""
+		}
+	}]
+}

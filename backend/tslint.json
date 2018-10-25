@@ -1,0 +1,22 @@
+{
+    "defaultSeverity": "error",
+    "extends": "tslint-config-standard",
+    "rules": {
+        "arrow-parens": false,
+        "quotemark": [
+            true,
+            "single",
+            "jsx-double"
+        ],
+        "indent": [ true, "spaces", 4 ],
+        "ter-indent": [
+            true,
+            4,
+            {
+              "SwitchCase": 1
+            }
+        ],
+        "trailing-comma": [ false ],
+        "no-empty": false
+    }
+}

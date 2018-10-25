@@ -1,0 +1,10 @@
+# 安装依赖的包
+node_modules/
+# yarn 安装的log
+yarn.lock
+# vscode 配置
+.vscode
+# ignore yarn-error.log
+yarn-error.log
+# build
+build
